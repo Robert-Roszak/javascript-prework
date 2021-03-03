@@ -15,7 +15,6 @@ let roundNumber = Math.floor(calculation);
 
 printMessage('Liczba po zaokrągleniu w dół to: ' + roundNumber);
 
-let randomNumber = Math.floor(math.random() * (19 - 11 + 1) + min);
-
-printMessage('Liczba przykładowa to: ' + randomNumber);
-printMessage('test message');
+// Additional calculation - random number in the range 11-19
+// let randomNumber = Math.floor(Math.random() * 9 + 11);
+// printMessage('Liczba przykładowa to: ' + randomNumber);
