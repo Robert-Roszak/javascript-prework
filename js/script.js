@@ -1,20 +1,34 @@
-let computerMove = 'kamień';
-let playerMove ='papier';
+let randomNumber = Math.floor(Math.random() * 3 + 1);
 
-printMessage('Zagrałem ' + computerMove + '! Twój ruch to ' + playerMove + ' i przegrałem :(');
+console.log('Wylosowana liczba to: ' + randomNumber);
 
-let randomFraction = Math.random();
+let computerMove = 'nieznany ruch';
 
-printMessage('Wylosowany ułamek to: ' + randomFraction);
+if(randomNumber == 1){
+  computerMove = 'kamień';
+}
+else if (randomNumber == 2){
+    computerMove = 'papier';
+} else {
+    computerMove = 'nożyce'
+}
 
-let calculation = randomFraction * 3 + 1;
+printMessage('Mój ruch to: ' + computerMove);
 
-printMessage('Ułamek pomnożony przez 3 i powiększony o 1: ' + calculation);
+let playerInput = prompt('Wybierz swój ruch! 1: kamień, 2: papier, 3: nożyce.');
 
-let roundNumber = Math.floor(calculation);
+console.log('Gracz wpisał: ' + playerInput);
 
-printMessage('Liczba po zaokrągleniu w dół to: ' + roundNumber);
+let playerMove = 'nieznany ruch';
 
-// Additional calculation - random number in the range 11-19
-// let randomNumber = Math.floor(Math.random() * 9 + 11);
-// printMessage('Liczba przykładowa to: ' + randomNumber);
+if(playerInput == '1'){
+  playerMove = 'kamień';
+}
+else if (playerInput == '2'){
+    playerMove ='papier';
+}
+else {
+    playerMove = 'nożyce';
+}
+
+printMessage('Twój ruch to: ' + playerMove);
