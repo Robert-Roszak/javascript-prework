@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>Kamień, papier, nożyce</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
 </head>
 <body>
 	<div class="container">
-		<h1>Kamień, papier, nożyce.. Zagrajmy!</h1>
+		<h1 class="title">Kamień, papier, nożyce.. Zagrajmy!</h1>
+		<p class="subtitle">Wybierz ikonę, aby zacząć.</p>
 		<div id="buttons">
-			<span class="far fa-hand-rock" id="play-rock"></span>
-			<span class="far fa-hand-paper" id="play-paper"></span>
-			<span class="far fa-hand-scissors" id="play-scissors"></span>
+			<span class="far fa-hand-rock" id="play-rock"><p>Kamień</p></span>
+			<span class="far fa-hand-paper" id="play-paper"><p>Papier</p></span>
+			<span class="far fa-hand-scissors" id="play-scissors"><p>Nożyce</p></span>
 		</div>
-		<div id="messages"></div>
+		<div class="messages" id="messages"></div>
 		<div id="results"></div>
 	</div>
 	<script src="js/functions.js"></script>
