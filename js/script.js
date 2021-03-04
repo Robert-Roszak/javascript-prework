@@ -1,3 +1,8 @@
+let playerScore = 0;
+let computerScore = 0;
+
+// printScore('Wynik komputera to: ' + computerScore + ', a gracza to: ' + playerScore);
+
 function playGame(argGame) {    
     /*nie moznaby sie odnosic do argGame zamist ustalac ze argGame=playerInput? */
     let playerInput = argGame;
@@ -23,13 +28,13 @@ function playGame(argGame) {
 
     let computerMove = getMoveName(randomNumber);
 
-    printMessage('Mój ruch to: ' + computerMove);
+   // printMessage('Mój ruch to: ' + computerMove);
 
     console.log('Gracz wpisał: ' + playerInput);
 
     let playerMove = getMoveName(playerInput);
 
-    printMessage('Twój ruch to: ' + playerMove);
+   // printMessage('Twój ruch to: ' + playerMove);
 
     function displayResult(argComputerMove, argPlayerMove){
         printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
@@ -37,23 +42,30 @@ function playGame(argGame) {
 
         if (argComputerMove == argPlayerMove){
             return('Remis!');
+x
         }
         else if (argComputerMove == 'kamień' && argPlayerMove == 'papier'){
+            ++playerScore;
             return('Ty wygrywasz');
         }
         else if (argComputerMove == 'kamień' && argPlayerMove == 'nożyce'){
+            ++computerScore;
             return('Ja wygrywam');
         }
         else if (argComputerMove == 'papier' && argPlayerMove == 'kamień'){
+            ++computerScore;
             return('Ja wygrywam');
         }
         else if (argComputerMove == 'papier' && argPlayerMove == 'nożyce'){
+            ++playerScore;
             return('Ty wygrywasz');
         }
         else if (argComputerMove == 'nożyce' && argPlayerMove == 'papier'){
+            ++computerScore;
             return('Ja wygrywam');
         }
         else if (argComputerMove =='nożyce' && argPlayerMove == 'kamień'){
+            ++playerScore;
             return('Ty wygrywasz');
         }
         else if (argPlayerMove == 'nieznany ruch'){
@@ -63,7 +75,10 @@ function playGame(argGame) {
             return('Coś poszło nie tak ;x');
         }
     }
+    
     printMessage(displayResult(computerMove,playerMove));
+    console.log('Wynik komputera to: ' + computerScore + ', a gracza to: ' + playerScore);
+    printScore('Wynik komputera to: ' + computerScore + ', a gracza to: ' + playerScore);
 }
 
 document.getElementById('play-rock').addEventListener('click', function() {

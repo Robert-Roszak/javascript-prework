@@ -6,4 +6,11 @@ function printMessage(msg){
 
 function clearMessages(){
 	document.getElementById('messages').innerHTML = '';
+	document.getElementById('results').innerHTML = '';
+}
+
+function printScore(msg){
+	let div = document.createElement('div');
+	div.innerHTML = msg;
+	document.getElementById('results').appendChild(div);
 }
