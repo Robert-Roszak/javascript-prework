@@ -81,12 +81,25 @@ x
     printScore('Wynik komputera to: ' + computerScore + ', a gracza to: ' + playerScore);
 }
 
+function resetScore() {
+    console.log('Nacisnieto reset');
+    playerScore = 0;
+    computerScore = 0;
+    clearMessages();
+    printScore('Wyniki wyzerowano :( Teraz jest ' + computerScore + ' do ' + playerScore);
+}
+
 document.getElementById('play-rock').addEventListener('click', function() {
-    playGame(1)
+    playGame(1), showBtn()
+
 });
 document.getElementById('play-paper').addEventListener('click', function() {
-    playGame(2)
+    playGame(2), showBtn()
 });
 document.getElementById('play-scissors').addEventListener('click', function() {
-    playGame(3)
+    playGame(3), showBtn()
+});
+
+document.getElementById('reset').addEventListener('click', function() {
+    resetScore()
 });

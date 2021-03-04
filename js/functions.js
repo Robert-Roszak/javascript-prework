@@ -14,3 +14,7 @@ function printScore(msg){
 	div.innerHTML = msg;
 	document.getElementById('results').appendChild(div);
 }
+
+function showBtn() {
+	document.getElementById('reset').style.display = "inline-block";
+ }
