@@ -32,12 +32,12 @@
         clearMessages();
 
         // Generate random computer move and convert it to string (1 -> rock)
-        let randomNumber = Math.floor(Math.random() * 3 + 1);
-        let computerMove = getMoveName(randomNumber);
+        const randomNumber = Math.floor(Math.random() * 3 + 1);
+        const computerMove = getMoveName(randomNumber);
         console.log('Wylosowana liczba to: ' + randomNumber);
 
         // Convert player move to string variant
-        let playerMove = getMoveName(playerInput);
+        const playerMove = getMoveName(playerInput);
         console.log('Gracz wybrał: ' + playerInput);
 
         // Show results in html and print the score
